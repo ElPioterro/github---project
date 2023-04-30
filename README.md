@@ -7,8 +7,9 @@ This is a fun simulation game you can watch rock, paper, and scissors fight for 
 ## Installation
 
 To get started with the Rock-Paper-Scissors Battle, simply clone this repository:
+```
 git clone https://github.com/ElPioterro/rock-paper-scissors-battle/tree/main
-
+```
 
 ## Usage
 
