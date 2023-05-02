@@ -1,4 +1,5 @@
 let w;
+let looping = true;
 const walkerList = [];
 function setup() {
   createCanvas(550, 550);
@@ -40,12 +41,18 @@ function draw() {
       ? "✂️"
       : "No winner";
     document.getElementById("result").innerHTML = `Winner is: ${result}`;
+    looping = false;
+    walkerList.forEach((element) => {
+      setTimeout(renderObject(element), 10000);
+    });
     noLoop();
   }
 }
 
 function renderObject(object) {
-  object.step();
-  object.collision();
+  if (looping) {
+    object.step();
+    object.collision();
+  }
   object.render();
 }
